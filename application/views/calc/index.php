@@ -49,6 +49,7 @@ if( isset( $status)){
 	<tr>
 		<td></td>
 		<td></td>
+		<td>上值</td>
 		<td><?php echo $data[0][0]['top'];?></td>
 		<td><?php echo $data[0][1]['top'];?></td>
 		<td><?php echo $data[0][2]['top'];?></td>
@@ -66,7 +67,8 @@ if( isset( $status)){
 <?php }?>
 
 	<tr>
-		<td></td>
+		<td>动值</td>
+		<td>下值</td>
 		<td>&nbsp;</td>
 		<td>abcd </td>
 		<td>a+b+c+d</td>
@@ -83,6 +85,7 @@ if( isset( $status)){
 	</tr>
 <?php if( $flag){?>
 	<tr>
+		<td><?php echo $data[0][0]['dynamic'];?></td>
 		<td><?php echo $data[0][0]['left'];?></td>
 		<td>xy</td>
 		<td><?php echo $data[0][0]['center'];?></td>
@@ -100,6 +103,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[1][0]['dynamic'];?></td>
 		<td><?php echo $data[1][0]['left'];?></td>
 		<td>x+y</td>
 		<td><?php echo $data[1][0]['center'];?></td>
@@ -117,6 +121,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[2][0]['dynamic'];?></td>
 		<td><?php echo $data[2][0]['left'];?></td>
 		<td>dxy</td>
 		<td><?php echo $data[2][0]['center'];?></td>
@@ -134,6 +139,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[3][0]['dynamic'];?></td>
 		<td><?php echo $data[3][0]['left'];?></td>
 		<td>d+x+y</td>
 		<td><?php echo $data[3][0]['center'];?></td>
@@ -151,6 +157,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[4][0]['dynamic'];?></td>
 		<td><?php echo $data[4][0]['left'];?></td>
 		<td>abcd+xy</td>
 		<td><?php echo $data[4][0]['center'];?></td>
@@ -168,6 +175,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[5][0]['dynamic'];?></td>
 		<td><?php echo $data[5][0]['left'];?></td>
 		<td>a+b+c+d+x+y</td>
 		<td><?php echo $data[5][0]['center'];?></td>
@@ -185,6 +193,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[6][0]['dynamic'];?></td>
 		<td><?php echo $data[6][0]['left'];?></td>
 		<td>abc+dxy</td>
 		<td><?php echo $data[6][0]['center'];?></td>
@@ -202,6 +211,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[7][0]['dynamic'];?></td>
 		<td><?php echo $data[7][0]['left'];?></td>
 		<td>abcdxy</td>
 		<td><?php echo $data[7][0]['center'];?></td>
@@ -219,6 +229,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[8][0]['dynamic'];?></td>
 		<td><?php echo $data[8][0]['left'];?></td>
 		<td>a+b+c+d+xy</td>
 		<td><?php echo $data[8][0]['center'];?></td>
@@ -236,6 +247,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[9][0]['dynamic'];?></td>
 		<td><?php echo $data[9][0]['left'];?></td>
 		<td>abcd+x+y</td>
 		<td><?php echo $data[9][0]['center'];?></td>
@@ -253,6 +265,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[10][0]['dynamic'];?></td>
 		<td><?php echo $data[10][0]['left'];?></td>
 		<td>abc+d+x+y</td>
 		<td><?php echo $data[10][0]['center'];?></td>
@@ -270,6 +283,7 @@ if( isset( $status)){
 	</tr>
 
 	<tr>
+		<td><?php echo $data[11][0]['dynamic'];?></td>
 		<td><?php echo $data[11][0]['left'];?></td>
 		<td>a+b+c+dxy</td>
 		<td><?php echo $data[11][0]['center'];?></td>

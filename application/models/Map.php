@@ -20,4 +20,21 @@ class Map extends CI_Model
 
 		return $map[$float];
 	}
+
+	//动数对应的
+	public function get_dynamic_map( $float)
+	{
+		$float = trim( strval( $float));
+
+		$_map = array(
+			'0.00'	=> 6 ,
+			'0.16'	=> 1 , 
+			'0.33'	=> 2 ,
+			'0.50'	=> 3 ,
+			'0.66'	=> 4 , 
+			'0.83'	=> 5 ,
+		);
+
+		return $_map[$float];
+	}
 }

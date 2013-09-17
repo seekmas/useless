@@ -52,5 +52,6 @@ class Calc extends CI_Controller
 			$status = false;
 
 		$this->template->build('calc/index' , array( 'status' => $status));
+		
 	}
 }
