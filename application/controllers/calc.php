@@ -7,7 +7,7 @@ class Calc extends CI_Controller
 
 	public function get_list()
 	{
-		return $this->list;
+		return $this->list ;
 	}
 
 	public function __construct()
