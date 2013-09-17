@@ -92,6 +92,8 @@ class Webkit_make_module extends CI_Module {
 						
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 1:
@@ -108,6 +110,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 2:
@@ -124,6 +128,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 3:
@@ -140,6 +146,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 4:
@@ -156,6 +164,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 5:
@@ -172,6 +182,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 6:
@@ -188,6 +200,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 7:
@@ -204,6 +218,8 @@ class Webkit_make_module extends CI_Module {
 						
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 						
 						break;
 					case 8:
@@ -220,6 +236,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 9:
@@ -236,6 +254,8 @@ class Webkit_make_module extends CI_Module {
 						
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 10:
@@ -252,6 +272,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						break;
 					case 11:
@@ -268,6 +290,8 @@ class Webkit_make_module extends CI_Module {
 
 						//动值计算
 						$show[$i][$j]['dynamic'] = $this->get_d( $y);
+						//定值计算
+						$show[$i][$j]['static'] = $this->get_static( $show[$i][$j]['top'] , $show[$i][$j]['left'] , $show[$i][$j]['dynamic']) ;
 
 						 //$show[$i][$j]['dynamic'] = $this->get_r( $x)
 						break;
@@ -281,6 +305,7 @@ class Webkit_make_module extends CI_Module {
 		file_put_contents('cache/tmp.tlib', json_encode( $show)) ;
 	}
 
+	//获取上下值
 	private function get_r( $number , $div = 8.0)
 	{	
 		$float = $number / $div;
@@ -293,6 +318,7 @@ class Webkit_make_module extends CI_Module {
 		return $this->map->get_map( $pick ) ;
 	}
 
+	//获取动值
 	private function get_d( $number , $div = 6.0)
 	{
 		$float = $number / $div ;
@@ -305,5 +331,22 @@ class Webkit_make_module extends CI_Module {
 		$pick = sprintf('%0.2f' , $pick);
 		//取动值
 		return $this->map->get_dynamic_map( $pick);
+	}
+
+	public function get_static( $top , $left , $dynamic)
+	{
+
+		if( $dynamic >= 1 && $dynamic <= 3)
+		{
+			return $top + $top + $left + $this->map->get_static_map( $left , $dynamic);
+
+		}else if( $dynamic >3 && $dynamic <= 6)
+		{
+			return $top + $this->map->get_static_map( $left , $dynamic) + $left + $left;
+		}
+		else
+		{
+			return ;
+		}
 	}
 }

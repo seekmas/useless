@@ -43,6 +43,11 @@ if( isset( $status)){
 	$flag = true;
 }
 ?>
+
+<div class="page-header">
+	<h4>组合列表</h4>
+</div>
+
 <table class="table table-bordered table-condensed">
 <?php if( $flag){?>
 
@@ -302,6 +307,265 @@ if( isset( $status)){
 <?php }?>
 </table>
 
+<div class="page-header">
+	<h4>定值列表</h4>
+</div>
 
+<table class="table table-bordered table-condensed">
+<?php if( $flag){?>
 
+	<tr>
+		<td></td>
+		<td></td>
+		<td>上值</td>
+		<td><?php echo $data[0][0]['top'];?></td>
+		<td><?php echo $data[0][1]['top'];?></td>
+		<td><?php echo $data[0][2]['top'];?></td>
+		<td><?php echo $data[0][3]['top'];?></td>
+		<td><?php echo $data[0][4]['top'];?></td>
+		<td><?php echo $data[0][5]['top'];?></td>
+		<td><?php echo $data[0][6]['top'];?></td>
+		<td><?php echo $data[0][7]['top'];?></td>
+		<td><?php echo $data[0][8]['top'];?></td>
+		<td><?php echo $data[0][9]['top'];?></td>
+		<td><?php echo $data[0][10]['top'];?></td>
+		<td><?php echo $data[0][11]['top'];?></td>
+	</tr>
+	
+<?php }?>
 
+	<tr>
+		<td>动值</td>
+		<td>下值</td>
+		<td>&nbsp;</td>
+		<td>abcd </td>
+		<td>a+b+c+d</td>
+		<td>abc</td>
+		<td>a+b+c</td>
+		<td>abcd+xy</td>
+		<td>a+b+c+d+x+y</td>
+		<td>abc+dxy</td>
+		<td>abcdxy</td>
+		<td>a+b+c+d+xy</td>
+		<td>abcd+x+y</td>
+		<td>abc+d+x+y</td>
+		<td>a+b+c+dxy</td>
+	</tr>
+<?php if( $flag){?>
+	<tr>
+		<td><?php echo $data[0][0]['dynamic'];?></td>
+		<td><?php echo $data[0][0]['left'];?></td>
+		<td>xy</td>
+		<td><?php echo $data[0][0]['static'];?></td>
+		<td><?php echo $data[0][1]['static'];?></td>
+		<td><?php echo $data[0][2]['static'];?></td>
+		<td><?php echo $data[0][3]['static'];?></td>
+		<td><?php echo $data[0][4]['static'];?></td>
+		<td><?php echo $data[0][5]['static'];?></td>
+		<td><?php echo $data[0][6]['static'];?></td>
+		<td><?php echo $data[0][7]['static'];?></td>
+		<td><?php echo $data[0][8]['static'];?></td>
+		<td><?php echo $data[0][9]['static'];?></td>
+		<td><?php echo $data[0][10]['static'];?></td>
+		<td><?php echo $data[0][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[1][0]['dynamic'];?></td>
+		<td><?php echo $data[1][0]['left'];?></td>
+		<td>x+y</td>
+		<td><?php echo $data[1][0]['static'];?></td>
+		<td><?php echo $data[1][1]['static'];?></td>
+		<td><?php echo $data[1][2]['static'];?></td>
+		<td><?php echo $data[1][3]['static'];?></td>
+		<td><?php echo $data[1][4]['static'];?></td>
+		<td><?php echo $data[1][5]['static'];?></td>
+		<td><?php echo $data[1][6]['static'];?></td>
+		<td><?php echo $data[1][7]['static'];?></td>
+		<td><?php echo $data[1][8]['static'];?></td>
+		<td><?php echo $data[1][9]['static'];?></td>
+		<td><?php echo $data[1][10]['static'];?></td>
+		<td><?php echo $data[1][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[2][0]['dynamic'];?></td>
+		<td><?php echo $data[2][0]['left'];?></td>
+		<td>dxy</td>
+		<td><?php echo $data[2][0]['static'];?></td>
+		<td><?php echo $data[2][1]['static'];?></td>
+		<td><?php echo $data[2][2]['static'];?></td>
+		<td><?php echo $data[2][3]['static'];?></td>
+		<td><?php echo $data[2][4]['static'];?></td>
+		<td><?php echo $data[2][5]['static'];?></td>
+		<td><?php echo $data[2][6]['static'];?></td>
+		<td><?php echo $data[2][7]['static'];?></td>
+		<td><?php echo $data[2][8]['static'];?></td>
+		<td><?php echo $data[2][9]['static'];?></td>
+		<td><?php echo $data[2][10]['static'];?></td>
+		<td><?php echo $data[2][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[3][0]['dynamic'];?></td>
+		<td><?php echo $data[3][0]['left'];?></td>
+		<td>d+x+y</td>
+		<td><?php echo $data[3][0]['static'];?></td>
+		<td><?php echo $data[3][1]['static'];?></td>
+		<td><?php echo $data[3][2]['static'];?></td>
+		<td><?php echo $data[3][3]['static'];?></td>
+		<td><?php echo $data[3][4]['static'];?></td>
+		<td><?php echo $data[3][5]['static'];?></td>
+		<td><?php echo $data[3][6]['static'];?></td>
+		<td><?php echo $data[3][7]['static'];?></td>
+		<td><?php echo $data[3][8]['static'];?></td>
+		<td><?php echo $data[3][9]['static'];?></td>
+		<td><?php echo $data[3][10]['static'];?></td>
+		<td><?php echo $data[3][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[4][0]['dynamic'];?></td>
+		<td><?php echo $data[4][0]['left'];?></td>
+		<td>abcd+xy</td>
+		<td><?php echo $data[4][0]['static'];?></td>
+		<td><?php echo $data[4][1]['static'];?></td>
+		<td><?php echo $data[4][2]['static'];?></td>
+		<td><?php echo $data[4][3]['static'];?></td>
+		<td><?php echo $data[4][4]['static'];?></td>
+		<td><?php echo $data[4][5]['static'];?></td>
+		<td><?php echo $data[4][6]['static'];?></td>
+		<td><?php echo $data[4][7]['static'];?></td>
+		<td><?php echo $data[4][8]['static'];?></td>
+		<td><?php echo $data[4][9]['static'];?></td>
+		<td><?php echo $data[4][10]['static'];?></td>
+		<td><?php echo $data[4][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[5][0]['dynamic'];?></td>
+		<td><?php echo $data[5][0]['left'];?></td>
+		<td>a+b+c+d+x+y</td>
+		<td><?php echo $data[5][0]['static'];?></td>
+		<td><?php echo $data[5][1]['static'];?></td>
+		<td><?php echo $data[5][2]['static'];?></td>
+		<td><?php echo $data[5][3]['static'];?></td>
+		<td><?php echo $data[5][4]['static'];?></td>
+		<td><?php echo $data[5][5]['static'];?></td>
+		<td><?php echo $data[5][6]['static'];?></td>
+		<td><?php echo $data[5][7]['static'];?></td>
+		<td><?php echo $data[5][8]['static'];?></td>
+		<td><?php echo $data[5][9]['static'];?></td>
+		<td><?php echo $data[5][10]['static'];?></td>
+		<td><?php echo $data[5][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[6][0]['dynamic'];?></td>
+		<td><?php echo $data[6][0]['left'];?></td>
+		<td>abc+dxy</td>
+		<td><?php echo $data[6][0]['static'];?></td>
+		<td><?php echo $data[6][1]['static'];?></td>
+		<td><?php echo $data[6][2]['static'];?></td>
+		<td><?php echo $data[6][3]['static'];?></td>
+		<td><?php echo $data[6][4]['static'];?></td>
+		<td><?php echo $data[6][5]['static'];?></td>
+		<td><?php echo $data[6][6]['static'];?></td>
+		<td><?php echo $data[6][7]['static'];?></td>
+		<td><?php echo $data[6][8]['static'];?></td>
+		<td><?php echo $data[6][9]['static'];?></td>
+		<td><?php echo $data[6][10]['static'];?></td>
+		<td><?php echo $data[6][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[7][0]['dynamic'];?></td>
+		<td><?php echo $data[7][0]['left'];?></td>
+		<td>abcdxy</td>
+		<td><?php echo $data[7][0]['static'];?></td>
+		<td><?php echo $data[7][1]['static'];?></td>
+		<td><?php echo $data[7][2]['static'];?></td>
+		<td><?php echo $data[7][3]['static'];?></td>
+		<td><?php echo $data[7][4]['static'];?></td>
+		<td><?php echo $data[7][5]['static'];?></td>
+		<td><?php echo $data[7][6]['static'];?></td>
+		<td><?php echo $data[7][7]['static'];?></td>
+		<td><?php echo $data[7][8]['static'];?></td>
+		<td><?php echo $data[7][9]['static'];?></td>
+		<td><?php echo $data[7][10]['static'];?></td>
+		<td><?php echo $data[7][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[8][0]['dynamic'];?></td>
+		<td><?php echo $data[8][0]['left'];?></td>
+		<td>a+b+c+d+xy</td>
+		<td><?php echo $data[8][0]['static'];?></td>
+		<td><?php echo $data[8][1]['static'];?></td>
+		<td><?php echo $data[8][2]['static'];?></td>
+		<td><?php echo $data[8][3]['static'];?></td>
+		<td><?php echo $data[8][4]['static'];?></td>
+		<td><?php echo $data[8][5]['static'];?></td>
+		<td><?php echo $data[8][6]['static'];?></td>
+		<td><?php echo $data[8][7]['static'];?></td>
+		<td><?php echo $data[8][8]['static'];?></td>
+		<td><?php echo $data[8][9]['static'];?></td>
+		<td><?php echo $data[8][10]['static'];?></td>
+		<td><?php echo $data[8][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[9][0]['dynamic'];?></td>
+		<td><?php echo $data[9][0]['left'];?></td>
+		<td>abcd+x+y</td>
+		<td><?php echo $data[9][0]['static'];?></td>
+		<td><?php echo $data[9][1]['static'];?></td>
+		<td><?php echo $data[9][2]['static'];?></td>
+		<td><?php echo $data[9][3]['static'];?></td>
+		<td><?php echo $data[9][4]['static'];?></td>
+		<td><?php echo $data[9][5]['static'];?></td>
+		<td><?php echo $data[9][6]['static'];?></td>
+		<td><?php echo $data[9][7]['static'];?></td>
+		<td><?php echo $data[9][8]['static'];?></td>
+		<td><?php echo $data[9][9]['static'];?></td>
+		<td><?php echo $data[9][10]['static'];?></td>
+		<td><?php echo $data[9][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[10][0]['dynamic'];?></td>
+		<td><?php echo $data[10][0]['left'];?></td>
+		<td>abc+d+x+y</td>
+		<td><?php echo $data[10][0]['static'];?></td>
+		<td><?php echo $data[10][1]['static'];?></td>
+		<td><?php echo $data[10][2]['static'];?></td>
+		<td><?php echo $data[10][3]['static'];?></td>
+		<td><?php echo $data[10][4]['static'];?></td>
+		<td><?php echo $data[10][5]['static'];?></td>
+		<td><?php echo $data[10][6]['static'];?></td>
+		<td><?php echo $data[10][7]['static'];?></td>
+		<td><?php echo $data[10][8]['static'];?></td>
+		<td><?php echo $data[10][9]['static'];?></td>
+		<td><?php echo $data[10][10]['static'];?></td>
+		<td><?php echo $data[10][11]['static'];?></td>
+	</tr>
+
+	<tr>
+		<td><?php echo $data[11][0]['dynamic'];?></td>
+		<td><?php echo $data[11][0]['left'];?></td>
+		<td>a+b+c+dxy</td>
+		<td><?php echo $data[11][0]['static'];?></td>
+		<td><?php echo $data[11][1]['static'];?></td>
+		<td><?php echo $data[11][2]['static'];?></td>
+		<td><?php echo $data[11][3]['static'];?></td>
+		<td><?php echo $data[11][4]['static'];?></td>
+		<td><?php echo $data[11][5]['static'];?></td>
+		<td><?php echo $data[11][6]['static'];?></td>
+		<td><?php echo $data[11][7]['static'];?></td>
+		<td><?php echo $data[11][8]['static'];?></td>
+		<td><?php echo $data[11][9]['static'];?></td>
+		<td><?php echo $data[11][10]['static'];?></td>
+		<td><?php echo $data[11][11]['static'];?></td>
+	</tr>
+<?php }?>
+</table>
