@@ -14,6 +14,8 @@
 </form>
 
 <?php 
+
+if( $this->input->post('posts') ){
 $ci = & get_instance();
 $list = $ci->get_list();
 ?>
@@ -41,6 +43,8 @@ if( isset( $status)){
 	$data = json_decode( $file , true);
 
 	$flag = true;
+}else{
+	$flag = false;
 }
 ?>
 
@@ -569,3 +573,6 @@ if( isset( $status)){
 	</tr>
 <?php }?>
 </table>
+
+
+<?php }?>

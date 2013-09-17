@@ -19,7 +19,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		
+		$data = array( 'application/controllers/calc.php'=>md5_file('application/controllers/calc.php') ,
+			   		   'application/models/Map.php'		=>md5_file('application/models/Map.php') , 
+			   		   'application/views/calc/index.php'		=>md5_file('application/views/calc/index.php') ,
+			   		   'application/modules/webkit/controllers/make.php'=>md5_file('application/modules/webkit/controllers/make.php') ,
+		);
+
+		echo '<pre>';
+		var_dump( $data);
+
+		//$this->load->view('welcome_message');
 	}
 }
 
