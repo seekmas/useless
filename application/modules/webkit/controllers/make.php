@@ -349,4 +349,26 @@ class Webkit_make_module extends CI_Module {
 			return ;
 		}
 	}
+
+	public function get_best( $d )
+	{
+		$result = array();
+
+		$result['top'] = $this->get_r( floatval( $d[0] . $d[1] . $d[2] . $d[3] ) + $d[4] + $d[5]);
+
+		$result['left'] = $this->get_r( floatval( $d[4] . $d[5] ) );
+
+		$result['dynamic'] = $this->get_d( $d[4] + $d[5] );
+
+		$result['static'] = $this->get_static( $result['top'] , $result['left'] , $result['dynamic']);
+
+		$addon = $result['left'] + 8 - $result['top'];
+		
+		if( $addon > 8)
+			$addon = $addon - 8;
+
+		$result['center'] = $result['top'].'0'.$addon ;
+
+		$this->load->view('best' , array( 'result' => $result));
+	}
 }

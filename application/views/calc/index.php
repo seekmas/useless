@@ -49,6 +49,11 @@ if( isset( $status)){
 ?>
 
 <div class="page-header">
+	<h4>上值 abcd+x+y  下值xy  动值 x+y</h4>
+</div>
+<?php $this->load->module('webkit/make/get_best' , array( $list));?>
+
+<div class="page-header">
 	<h4>组合列表</h4>
 </div>
 
